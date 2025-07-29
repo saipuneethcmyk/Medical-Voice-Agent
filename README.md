@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🩺 Medical Voice Agent
 
-## Getting Started
+An intelligent **AI-powered medical voice consultation platform** where users can talk to **10 different AI specialist doctors** in real-time for medical concerns. This project integrates **Next.js**, **NeonDB**, **Clerk**, **AssemblyAI**, **Vois**, and **Gemini API** to deliver a seamless voice-enabled healthcare experience.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
+* 🎙 **Real-time voice consultation** with AI specialist doctors
+* 🏥 **10 medical specializations** for tailored assistance
+* 🧠 **Gemini API** integration to analyze user queries and suggest the right doctor
+* 🔒 **Clerk Authentication** for secure login and user management
+* 🗄 **NeonDB (PostgreSQL)** for efficient backend storage
+* 🗣 **AssemblyAI** for speech-to-text transcription
+* 🔊 **Vois Integration** for realistic AI voice responses
+* 💬 **Shadcn UI components** for dialogs, tables, and user-friendly design
+* 🌐 **Next.js** full-stack framework for smooth frontend & backend handling
+
+
+## 🛠️ Tech Stack
+
+| Technology       | Purpose                                    |
+| ---------------- | ------------------------------------------ |
+| **Next.js**      | Frontend & backend framework               |
+| **NeonDB**       | Serverless PostgreSQL database             |
+| **Clerk**        | Authentication and user management         |
+| **Gemini API**   | AI-powered query understanding             |
+| **AssemblyAI**   | Speech-to-text transcription               |
+| **Vois**         | Voice synthesis and real-time conversation |
+| **Shadcn UI**    | Dialog boxes, tables, and UI components    |
+| **Tailwind CSS** | Styling and responsive design              |
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+
+
+git clone https://github.com/your-username/medical-voice-agent.git
+cd medical-voice-agent
+
+
+### 2️⃣ Install Dependencies
+npm install
+
+
+### 3️⃣ Configure Environment Variables
+
+Create a `.env.local` file in the project root and add the following:
+
+env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+DATABASE_URL=your_neon_database_url
+
+ASSEMBLYAI_API_KEY=your_assembly_ai_key
+VOIS_API_KEY=your_vois_key
+GEMINI_API_KEY=your_gemini_api_key
+
+
+### 4️⃣ Run Database Migrations
+
+If using Drizzle ORM (or similar):
+npm run db:migrate
+
+
+### 5️⃣ Start the Development Server
+
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Login** using Clerk authentication.
+2. **Describe your medical concern** in the voice consultation dialog.
+3. **AI will analyze** your input using Gemini API and suggest the best specialist.
+4. **Start a voice consultation** with the selected AI doctor (powered by AssemblyAI & Vois).
+5. **Get medical advice** in real-time.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧑‍⚕️ Specializations
 
-## Learn More
+* General Physician
+* Cardiologist
+* Dermatologist
+* Neurologist
+* Orthopedic
+* Gynecologist
+* Pediatrician
+* Psychiatrist
+* ENT Specialist
+* Dentist
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
